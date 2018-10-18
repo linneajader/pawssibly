@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <Text1>Det är inte lätt när det är svårt... Framför allt inte med Windows</Text1>
+        <Text1>Nu är vi igång! Äntligen XD</Text1>
       </AppContainer>
     );
   }
