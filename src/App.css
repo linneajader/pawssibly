@@ -27,3 +27,63 @@
   to { transform: rotate(360deg); }
 }
 
+div.meny {
+height: 500px;
+width: 800px;
+background-color: #E0E0E0;
+}
+
+.menybar {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+  
+  -webkit-flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.ruta {
+  background: #FFCDB2;
+  padding: 5px;
+  width: 110px;
+  height: 110px;
+  margin: auto;
+  
+  line-height: 100px;
+  color: #333333;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ruta2 {
+  background: #FFB4A2;
+  padding: 5px;
+  width: 110px;
+  height: 110px;
+  margin: auto;
+  
+  line-height: 100px;
+  color: #333333;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ruta3 {
+  background: #FFCDB2;
+  padding: 5px;
+  width: 110px;
+  height: 120px;
+  margin: auto;
+  
+  line-height: 100px;
+  color: #333333;
+  font-size: 1em;
+  text-align: center;
+}

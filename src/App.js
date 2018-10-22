@@ -38,7 +38,17 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <Text1>Nu är vi igång! Äntligen XD</Text1>
+
+        <div class = "meny">
+
+         <ul class="menybar">
+           <li class="ruta">1</li>
+           <li class="ruta2">2</li>
+           <li class="ruta3">3</li>
+           <li class="ruta2">4</li>
+           <li class="ruta">5</li>
+         </ul>
+         </div>
       </AppContainer>
     );
   }
