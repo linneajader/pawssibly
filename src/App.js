@@ -40,7 +40,14 @@ class App extends Component {
       <AppContainer>
 
         <div class = "meny">
-
+          <div class = "tinder">
+            <div class = "doggo">
+            </div>
+            <p>( ͡° ͜ʖ ͡° )</p>
+         </div>
+            
+            <br/>
+            <div>
          <ul class="menybar">
            <li class="ruta">1</li>
            <li class="ruta2">2</li>
@@ -48,6 +55,8 @@ class App extends Component {
            <li class="ruta2">4</li>
            <li class="ruta">5</li>
          </ul>
+         </div>
+
          </div>
       </AppContainer>
     );

@@ -28,9 +28,15 @@
 }
 
 div.meny {
+  padding-left: 10vh;
+  padding-right: 10vh;
+  padding-top: 10vw;
+
 height: 500px;
-width: 800px;
+width: 100vh;
 background-color: #E0E0E0;
+
+align-items: center;
 }
 
 .menybar {
@@ -49,12 +55,32 @@ background-color: #E0E0E0;
   justify-content: space-around;
 }
 
+.tinder {
+  padding-left: 50%;
+  padding-top: 5vw;
+  margin: auto;
+  list-style: none;
+  
+
+  height: 30vw;
+  width: 50VH;
+  background-color: rgb(219, 161, 202);
+  align-items: center;
+}
+.doggo{
+  height: 100px;
+  width: 100px;
+  background-color: #E0E0E0;
+  align-self: center;
+}
+
 .ruta {
   background: #FFCDB2;
   padding: 5px;
   width: 110px;
   height: 110px;
   margin: auto;
+  align-self: flex-end;
   
   line-height: 100px;
   color: #333333;
@@ -68,6 +94,7 @@ background-color: #E0E0E0;
   width: 110px;
   height: 110px;
   margin: auto;
+  align-self: flex-end;
   
   line-height: 100px;
   color: #333333;
@@ -81,6 +108,7 @@ background-color: #E0E0E0;
   width: 110px;
   height: 120px;
   margin: auto;
+  align-self: flex-end;
   
   line-height: 100px;
   color: #333333;
