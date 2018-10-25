@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import image1 from "../../pictures/NavigationBar/magnifying glass.png";
+import image2 from "../../pictures/NavigationBar/image 3.1.png";
 import image3 from "../../pictures/NavigationBar/paw.png";
+import image4 from "../../pictures/NavigationBar/bubble.png";
+import image5 from "../../pictures/NavigationBar/house.png";
+
+
 
 import NavigationButtonComponent from './NavigationButtonComponent';
 
@@ -22,11 +28,11 @@ class App extends Component {
   render() {
     return (
       <ComponentContainer>
-        <NavigationButtonComponent/>
-        <NavigationButtonComponent even/>
+        <NavigationButtonComponent image={image1}/>
+        <NavigationButtonComponent even image={image2}/>
         <NavigationButtonComponent center image={image3}/>
-        <NavigationButtonComponent even/>
-        <NavigationButtonComponent/>
+        <NavigationButtonComponent even image={image4}/>
+        <NavigationButtonComponent image={image5}/>
       </ComponentContainer>
     );
   }
