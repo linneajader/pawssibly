@@ -11,31 +11,27 @@ import image5 from "../../pictures/NavigationBar/house.png";
 import NavigationButtonComponent from './NavigationButtonComponent';
 
 const ComponentContainer = styled.div`
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: flex;
-    height: 80px;
+    height: 60rem;
     width: 100%;
-`
-const BackgroundGIF = styled.img`
-    width: 100vw;
+    max-width: 1000px;
 `;
 
 class App extends Component {
-  onClick = () => {
-    window.alert('Hej Linnea!');
-  }
-  render() {
-    return (
-      <ComponentContainer>
-        <NavigationButtonComponent image={image1}/>
-        <NavigationButtonComponent even image={image2}/>
-        <NavigationButtonComponent center image={image3}/>
-        <NavigationButtonComponent even image={image4}/>
-        <NavigationButtonComponent image={image5}/>
-      </ComponentContainer>
-    );
-  }
+    render() {
+        const {appState, setAppState} = this.props;
+        return (
+            <ComponentContainer>
+                <NavigationButtonComponent nr={1} image={image1} {...{appState, setAppState}}/>
+                <NavigationButtonComponent nr={2} even image={image2} {...{appState, setAppState}}/>
+                <NavigationButtonComponent nr={3} center image={image3} {...{appState, setAppState}}/>
+                <NavigationButtonComponent nr={4} even image={image4} {...{appState, setAppState}}/>
+                <NavigationButtonComponent nr={5} image={image5} {...{appState, setAppState}}/>
+            </ComponentContainer>
+        );
+    }
 }
 
 export default App;

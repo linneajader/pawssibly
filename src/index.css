@@ -3,6 +3,23 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
-.root {
+html {
+  /*the vw of 100vw split by 320pt; ie pt/vw*/
+  font-size: .3125vw;
+  font-family: sans-serif;
+}
+@media (min-width: 420px) {
+  html {
+    font-size: 1.3px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 1px;
+  }
+}
+#root {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }

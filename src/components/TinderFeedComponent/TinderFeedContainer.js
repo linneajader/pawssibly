@@ -9,12 +9,12 @@ const ComponentContainer = styled.div`
     justify-content: center;
     width: 90%;
     height: fit-content;
-    padding: 10px 0;
+    padding: 10rem 0;
     background-color: #E5989B;
-`
+`;
 const PictureContainer = styled.img`
-    width: 85vw;
-    height: 85vw;
+    width: calc(100% - 20rem);
+    height: 100%;
     object-fit: contain;
 `;
 const NameTextContainer = styled.div`
@@ -39,19 +39,48 @@ const InfoText = styled.p`
         font-weight: normal;
     `}
 `;
+const LikeButtonContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% + 30rem);
+    margin-top: -25rem;
+    margin-bottom: 20rem;
+`;
+const LikeButton = styled.button`
+    width: 50rem;
+    height: 50rem;
+    margin-bottom: -25rem;
+    border-radius: 25rem;
+    background-color: green;
+    font-size: 10rem;
+    ${props => props.left && css`
+        background-color: red;
+    `}
+`;
 
 class App extends Component {
   render() {
     return (
       <ComponentContainer>
           <PictureContainer src={image} alt="image"/>
+          <LikeButtonContainer>
+              <LikeButton left>X</LikeButton>
+              <LikeButton>X</LikeButton>
+          </LikeButtonContainer>
           <NameTextContainer>
               <NameText>Kurt</NameText>
               <NameText>5år</NameText>
           </NameTextContainer>
           <InfoText>Ras: Shiba Inu</InfoText>
           <InfoText>Kön: Hane</InfoText>
-          <InfoText marginTop>Mer info...</InfoText>
+          <InfoText marginTop>Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
+              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
+              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
+              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
+              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
+              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
+              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
+          </InfoText>
       </ComponentContainer>
     );
   }
