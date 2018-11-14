@@ -16,12 +16,7 @@ const ImageContainer = styled.img`
     padding: 15%;
     width: calc(100% - 30%);
 `;
-const NameTextContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-`;
-const NameText = styled.h2`
+const Header = styled.h2`
     align-self: flex-start;
     margin: 5px 10%;
     margin-bottom: 10px; 
@@ -34,13 +29,6 @@ const NameTextV = styled.p`
     font-size: 15px;
     font-weight: light;
 `;
-const VInfoText = styled.p`
-    align-self: flex-end;
-    margin: 5px 10%;
-    margin-bottom: 10px; 
-    font-size: 12px;
-    font-weight: light;
-`;
 const NameTextL = styled.p`
     align-self: flex-start;
     margin: 5px 10%;
@@ -48,13 +36,21 @@ const NameTextL = styled.p`
     font-size: 15px;
     font-weight: light;
 `;
-const LInfoText = styled.p`
+const VInfoText = styled.h3`
+    align-self: flex-end;
+    margin: 5px 10%;
+    margin-bottom: 10px; 
+    font-size: 12px;
+    font-weight: light;
+`;
+const LInfoText = styled.h3`
     align-self: flex-start;
     margin: 5px 10%;
     margin-bottom: 10px; 
     font-size: 12px;
     font-weight: light;
 `;
+
 const InfoText = styled.p`
     align-self: flex-end;
     margin: 0 15%; 
@@ -71,8 +67,8 @@ class App extends Component {
   render() {
     return (
       <ComponentContainer>
-          <NameText> Vilka är vi?</NameText>
-          <ImageContainer src={this.props.image} alt="vendla"/>
+          <Header> Vilka är vi?</Header>
+          <ImageContainer src={vendla} alt="vendla"/>
           <NameTextV> V E N D L A</NameTextV>
           <VInfoText> Jag heter Vendla och sitter på min lektion och programerar</VInfoText>
           <NameTextL> L I N N E A</NameTextL>

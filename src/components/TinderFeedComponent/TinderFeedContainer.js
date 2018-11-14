@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
-import image from "../../pictures/cute-dog-shiba.jpg";
 
 const ComponentContainer = styled.div`
     display: flex;
@@ -59,28 +58,28 @@ const LikeButton = styled.button`
 `;
 
 class App extends Component {
+    onClick = () => {
+        const likedDogs = JSON.parse(JSON.stringify(this.props.appState.likedDogs));
+        likedDogs.push(0);
+        this.props.setAppState({likedDogs: likedDogs})
+    };
   render() {
+      const {appState, setAppState} = this.props;
+      const dog = appState.dogDB[0];
     return (
       <ComponentContainer>
-          <PictureContainer src={image} alt="image"/>
+          <PictureContainer src={dog.image} alt="image"/>
           <LikeButtonContainer>
               <LikeButton left>X</LikeButton>
-              <LikeButton>X</LikeButton>
+              <LikeButton onClick={this.onClick}>X</LikeButton>
           </LikeButtonContainer>
           <NameTextContainer>
-              <NameText>Kurt</NameText>
-              <NameText>5år</NameText>
+              <NameText>{dog.name}</NameText>
+              <NameText>{dog.age}</NameText>
           </NameTextContainer>
-          <InfoText>Ras: Shiba Inu</InfoText>
-          <InfoText>Kön: Hane</InfoText>
-          <InfoText marginTop>Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
-              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
-              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
-              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
-              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
-              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
-              Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...
-          </InfoText>
+          <InfoText>Ras: {dog.breed}</InfoText>
+          <InfoText>Kön: {dog.gender}</InfoText>
+          <InfoText marginTop>{dog.info}</InfoText>
       </ComponentContainer>
     );
   }

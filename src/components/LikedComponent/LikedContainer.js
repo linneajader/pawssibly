@@ -2,31 +2,13 @@ import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
 import image from "../../pictures/cute-dog-shiba.jpg";
 
+import LikedComponent from './LikedComponent'
+import NavigationBarComponent from "../NavigationBarComponent/NavigationBarContainer";
+
 const ComponentContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: fit-content;
-    padding: 10rem 0;
-    background-color: #e7e7e7;
-`;
-const PictureContainer = styled.img`
-    width: calc(100% - 20rem);
-    height: 100%;
-    object-fit: contain;
-`;
-const NameTextContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-`;
-const NameText = styled.h2`
-    align-self: flex-start;
-    margin: 5px 10%;
-    margin-bottom: 10px; 
-    font-size: 20px;
 `;
 const InfoText = styled.p`
     align-self: flex-start;
@@ -39,12 +21,22 @@ const InfoText = styled.p`
         font-weight: normal;
     `}
 `;
-
 class App extends Component {
+    renderLikedDogs = (appState, setAppState) => {
+        return(
+            this.props.appState.likedDogs.map((dog, idx)=>{
+                return <LikedComponent key={idx} dog={this.props.appState.dogDB[dog]} {...{appState, setAppState}}/>
+            })
+        )
+    };
   render() {
+      const {appState, setAppState} = this.props;
+      const likedDogs = appState.likedDogs.length === 0
+          ? <InfoText>Du har inte likeat någon voffsing än. Go swipe!</InfoText>
+          : this.renderLikedDogs(appState, setAppState);
     return (
       <ComponentContainer>
-          <InfoText>Du har inte likeat någon voffsing än. Go swipe!</InfoText>
+          {likedDogs}
       </ComponentContainer>
     );
   }
