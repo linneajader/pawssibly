@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
 import vendla from "../../pictures/placeholder.png";
 
+import AboutUsComponent from './AboutUsComponent'
+
 const ComponentContainer = styled.div`
     display: flex;
     flex-direction: column;
