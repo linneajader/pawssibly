@@ -72,9 +72,9 @@ class App extends Component {
           <Header> Vilka är vi?</Header>
           <ImageContainer src={vendla} alt="vendla"/>
           <NameTextV> V E N D L A</NameTextV>
-          <VInfoText> Jag heter Vendla och sitter på min lektion och programerar</VInfoText>
+          <VInfoText> Ålder: 18 <br/> Pronomen: Hon <br/> Vendla föredrar en innekväll med katten och hunden över en kväll ute. När hon inte är i skolan och studerar vänder hon sig gärna åt det estetiska ämnena. Hon läser bl.a. bild och form på kulturskolan. Vendla är stolt matte till en energisk blandras mellan Yorkshire terrier, Lhasa apso och Tibitansk terrier. </VInfoText>
           <NameTextL> L I N N E A</NameTextL>
-          <LInfoText> Linnea sitter i labbet och jobbar med UF</LInfoText>
+          <LInfoText> Ålder: 18 <br/> Pronomen: Hon <br/> Linnea är en glad tjej som ständigt vill se sig själv utvecklas. När hon inte studerar jobbar hon som skridskotränare, spenderar tid med sin hund eller tid på scouterna samt umgås med nära och kära. Linnea är stolt matte till en energisk skogsblandning mellan Jämnthund och Karelisk Björnhund.</LInfoText>
       </ComponentContainer>
     );
   }

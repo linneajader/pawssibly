@@ -17,13 +17,7 @@ class AppState extends Component {
                     age: '5 år',
                     breed: 'Shiba Inu',
                     gender: 'Hane',
-                    info: 'Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...' +
-                        'Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...' +
-                        'Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...' +
-                        'Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...' +
-                        'Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...' +
-                        'Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...' +
-                        'Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...Mer info...'
+                    info: 'Brought to America from Japan as recently as 60 years ago, Shibas are growing in popularity in the West and are already the most popular breed in their homeland. Their white markings combined with their coloring (red, red sesame, or black and tan) and their alert expression and smooth stride makes them almost foxlike. They’re sturdy, muscular dogs with a bold, confident personality to match.'
                 },
                 {
                     image: image2,

@@ -56,19 +56,18 @@ class App extends Component {
     };
     render() {
         const {appState, setAppState} = this.props;
-        const dog = this.props.dog;
+        const us = this.props.us;
         return (
             <ComponentContainer onClick={this.onClick} expand={this.state.expanded}>
                 <ShortInfoContainer>
-                    <PictureContainer src={dog.image} alt="image"/>
+                    <PictureContainer src={us.image} alt="image"/>
                     <TextContainer>
-                        <NameText>{dog.name}</NameText>
-                        <NameText>{dog.age}</NameText>
-                        <InfoText>Ras: {dog.breed}</InfoText>
-                        <InfoText>Kön: {dog.gender}</InfoText>
+                        <NameText>{us.name}</NameText>
+                        <NameText>{us.age}</NameText>
+                        <InfoText>Pronomen: {us.gender}</InfoText>
                     </TextContainer>
                 </ShortInfoContainer>
-                <InfoText marginTop>{dog.info}</InfoText>
+                <InfoText marginTop>{us.info}</InfoText>
             </ComponentContainer>
         );
     }
