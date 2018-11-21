@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
-import vendla from "../../pictures/placeholder.png";
+import vendla from "../../pictures/AboutUs/vendla.png";
+import linnea from "../../pictures/AboutUs/linnea.JPG";
 
 import AboutUsComponent from './AboutUsComponent'
 
@@ -15,8 +16,10 @@ const ComponentContainer = styled.div`
     background-color: #e7e7e7;
 `;
 const ImageContainer = styled.img`
-    padding: 15%;
-    width: calc(100% - 30%);
+    height: 100rem;
+    width: 100rem;
+    object-fit: contain;
+    border-radius: 50rem;
 `;
 const Header = styled.h2`
     align-self: flex-start;
@@ -24,34 +27,14 @@ const Header = styled.h2`
     margin-bottom: 10px; 
     font-size: 20px;
 `;
-const NameTextV = styled.p`
-    align-self: flex-end;
-    margin: 5px 10%;
+const NameText = styled.p`
+    align-self: flex-start;
+    margin: 5rem 10%;
     margin-bottom: 10px; 
     font-size: 15px;
     font-weight: light;
 `;
-const NameTextL = styled.p`
-    align-self: flex-start;
-    margin: 5px 10%;
-    margin-bottom: 10px; 
-    font-size: 15px;
-    font-weight: light;
-`;
-const VInfoText = styled.h3`
-    align-self: flex-end;
-    margin: 5px 10%;
-    margin-bottom: 10px; 
-    font-size: 12px;
-    font-weight: light;
-`;
-const LInfoText = styled.h3`
-    align-self: flex-start;
-    margin: 5px 10%;
-    margin-bottom: 10px; 
-    font-size: 12px;
-    font-weight: light;
-`;
+
 
 const InfoText = styled.p`
     align-self: flex-end;
@@ -71,10 +54,11 @@ class App extends Component {
       <ComponentContainer>
           <Header> Vilka är vi?</Header>
           <ImageContainer src={vendla} alt="vendla"/>
-          <NameTextV> V E N D L A</NameTextV>
-          <VInfoText> Ålder: 18 <br/> Pronomen: Hon <br/> Vendla föredrar en innekväll med katten och hunden över en kväll ute. När hon inte är i skolan och studerar vänder hon sig gärna åt det estetiska ämnena. Hon läser bl.a. bild och form på kulturskolan. Vendla är stolt matte till en energisk blandras mellan Yorkshire terrier, Lhasa apso och Tibitansk terrier. </VInfoText>
-          <NameTextL> L I N N E A</NameTextL>
-          <LInfoText> Ålder: 18 <br/> Pronomen: Hon <br/> Linnea är en glad tjej som ständigt vill se sig själv utvecklas. När hon inte studerar jobbar hon som skridskotränare, spenderar tid med sin hund eller tid på scouterna samt umgås med nära och kära. Linnea är stolt matte till en energisk skogsblandning mellan Jämnthund och Karelisk Björnhund.</LInfoText>
+          <NameText> V E N D L A</NameText>
+          <InfoText> Ålder: 18 <br/> Pronomen: Hon <br/> Vendla föredrar en innekväll med katten och hunden över en kväll ute. När hon inte är i skolan och studerar vänder hon sig gärna åt det estetiska ämnena. Hon läser bl.a. bild och form på kulturskolan. Vendla är stolt matte till en energisk blandras mellan Yorkshire terrier, Lhasa apso och Tibitansk terrier. </InfoText>
+          <ImageContainer src={linnea} alt="linnea">
+          </ImageContainer><NameText> L I N N E A</NameText>
+          <InfoText> Ålder: 18 <br/> Pronomen: Hon <br/> Linnea är en glad tjej som ständigt vill se sig själv utvecklas. När hon inte studerar jobbar hon som skridskotränare, spenderar tid med sin hund eller tid på scouterna samt umgås med nära och kära. Linnea är stolt matte till en energisk skogsblandning mellan Jämnthund och Karelisk Björnhund.</InfoText>
       </ComponentContainer>
     );
   }

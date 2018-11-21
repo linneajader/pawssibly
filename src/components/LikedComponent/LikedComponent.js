@@ -60,7 +60,7 @@ class App extends Component {
         return (
             <ComponentContainer onClick={this.onClick} expand={this.state.expanded}>
                 <ShortInfoContainer>
-                    <PictureContainer src={dog.image} alt="image"/>
+                    <PictureContainer src={dog.image} alt='image'/>
                     <TextContainer>
                         <NameText>{dog.name}</NameText>
                         <NameText>{dog.age}</NameText>
