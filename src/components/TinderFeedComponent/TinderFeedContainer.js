@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
 
+import TinderFeedComponent from './TinderFeedComponent'
+import LikedComponent from "../LikedComponent/LikedContainer";
+
 const ComponentContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -11,75 +14,19 @@ const ComponentContainer = styled.div`
     padding: 10rem 0;
     background-color: #E5989B;
 `;
-const PictureContainer = styled.img`
-    width: calc(100% - 20rem);
-    height: 100%;
-    object-fit: contain;
-`;
-const NameTextContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-`;
-const NameText = styled.h2`
-    align-self: flex-start;
-    margin: 5px 10%;
-    margin-bottom: 10px; 
-    font-size: 20px;
-`;
-const InfoText = styled.p`
-    align-self: flex-start;
-    margin: 0 15%; 
-    margin-bottom: 5px; 
-    font-size: 15px;
-    font-weight: bold;
-    ${props => props.marginTop && css`
-        margin-top: 10px;
-        font-weight: normal;
-    `}
-`;
-const LikeButtonContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: calc(100% + 30rem);
-    margin-top: -25rem;
-    margin-bottom: 20rem;
-`;
-const LikeButton = styled.button`
-    width: 50rem;
-    height: 50rem;
-    margin-bottom: -25rem;
-    border-radius: 25rem;
-    background-color: green;
-    font-size: 10rem;
-    ${props => props.left && css`
-        background-color: red;
-    `}
+const NoMoreDogs = styled.div`
+    font-size: 35rem;
 `;
 
 class App extends Component {
-    onClick = () => {
-        const likedDogs = JSON.parse(JSON.stringify(this.props.appState.likedDogs));
-        likedDogs.push(0);
-        this.props.setAppState({likedDogs: likedDogs})
-    };
   render() {
       const {appState, setAppState} = this.props;
-      const dog = appState.dogDB[0];
+      const child = appState.dogDB[this.props.appState.dogNr]
+          ? <TinderFeedComponent {...{appState, setAppState}}/>
+          : <NoMoreDogs>No more dogs :'(</NoMoreDogs>;
     return (
       <ComponentContainer>
-          <PictureContainer src={dog.image} alt="image"/>
-          <LikeButtonContainer>
-              <LikeButton left>X</LikeButton>
-              <LikeButton onClick={this.onClick}>X</LikeButton>
-          </LikeButtonContainer>
-          <NameTextContainer>
-              <NameText>{dog.name}</NameText>
-              <NameText>{dog.age}</NameText>
-          </NameTextContainer>
-          <InfoText>Ras: {dog.breed}</InfoText>
-          <InfoText>Kön: {dog.gender}</InfoText>
-          <InfoText marginTop>{dog.info}</InfoText>
+          {child}
       </ComponentContainer>
     );
   }

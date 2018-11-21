@@ -20,8 +20,9 @@ const ShortInfoContainer = styled.div`
     min-height: 100rem;
 `;
 const PictureContainer = styled.img`
+    width: 100rem;
     height: 100rem;
-    object-fit: contain;
+    object-fit: cover;
 `;
 const TextContainer = styled.div`
   
@@ -43,19 +44,36 @@ const InfoText = styled.p`
         font-weight: normal;
     `}
 `;
+const DropdownArrow = styled.p`
+    margin-left: auto;
+    align-self: center;
+`;
+const Arrow = styled.i`
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    vertical-align: middle;
+    transform: rotate(-135deg);
+    ${props => props.down && css`
+        transform: rotate(45deg);
+    `}
+`;
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            expanded: false
+            expanded: false,
+            down: true
         };
     }
     onClick = () => {
         const expanded = JSON.parse(JSON.stringify(this.state.expanded));
-        this.setState({expanded: !expanded});
+        this.setState({expanded: !expanded, down: !this.state.down});
     };
     render() {
         const {appState, setAppState} = this.props;
+        console.log(appState.likedDogs);
         const dog = this.props.dog;
         return (
             <ComponentContainer onClick={this.onClick} expand={this.state.expanded}>
@@ -67,6 +85,7 @@ class App extends Component {
                         <InfoText>Ras: {dog.breed}</InfoText>
                         <InfoText>Kön: {dog.gender}</InfoText>
                     </TextContainer>
+                    <DropdownArrow><Arrow down={this.state.down}/></DropdownArrow>
                 </ShortInfoContainer>
                 <InfoText marginTop>{dog.info}</InfoText>
             </ComponentContainer>

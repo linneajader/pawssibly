@@ -3,17 +3,16 @@ import styled, {css} from 'styled-components';
 
 const ComponentContainer = styled.div`
     height: 100%;
-    width: 18.75%;
+    width: 20%;
     background-color: #FFCDB2;
     overflow: hidden;
     cursor: pointer;
     ${props => props.even && css`
         background-color: #FFB4A2;
     `}
-    ${props => props.center && css`
-        align-self: flex-end;
-        width: 25%;
-        height: calc(100% + 15rem);
+    ${props => props.active && css`
+        transform: scale(1.2);
+        transition: all ease-in-out .1s;
     `}
 `;
 const ImageContainer = styled.img`
@@ -28,7 +27,11 @@ class App extends Component {
     render() {
         const {appState, setAppState} = this.props;
         return (
-            <ComponentContainer onClick={this.onClick} even={this.props.even} center={this.props.center}>
+            <ComponentContainer
+                onClick={this.onClick}
+                even={this.props.even}
+                active={this.props.active}
+            >
                 <ImageContainer src={this.props.image} alt="image"/>
             </ComponentContainer>
         );

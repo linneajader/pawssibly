@@ -3,8 +3,6 @@ import styled, {css} from 'styled-components';
 import vendla from "../../pictures/AboutUs/vendla.png";
 import linnea from "../../pictures/AboutUs/linnea.JPG";
 
-import AboutUsComponent from './AboutUsComponent'
-
 const ComponentContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -18,7 +16,7 @@ const ComponentContainer = styled.div`
 const ImageContainer = styled.img`
     height: 100rem;
     width: 100rem;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50rem;
 `;
 const Header = styled.h2`
@@ -32,7 +30,7 @@ const NameText = styled.p`
     margin: 5rem 10%;
     margin-bottom: 10px; 
     font-size: 15px;
-    font-weight: light;
+    font-weight: normal;
 `;
 
 

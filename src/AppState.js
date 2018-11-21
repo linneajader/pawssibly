@@ -10,6 +10,7 @@ class AppState extends Component {
         super(props);
         this.state = {
             activeStage: 3,
+            dogNr: 0,
             dogDB: [
                 {
                     image: image1,
@@ -52,7 +53,7 @@ class AppState extends Component {
                     info: 'Boxers were originally bred to be medium-size guard dogs. Today, although they are a part of the AKC’s Working Group, they mostly find homes as loving family companions. They’ve got the muscular build of the guard dogs they were bred to be, and they can look imposing until you realize that within those sturdy bodies, they’re bursting with playful joie de vivre.'
                 }
             ],
-            likedDogs: [1, 2, 3, 4]
+            likedDogs: []
         };
     }
 
