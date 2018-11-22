@@ -20,6 +20,8 @@ import bobby from "./pictures/Doggos/bobby.jpg";
 import jolie from "./pictures/Doggos/jolie.jpeg";
 import indie from "./pictures/Doggos/indie.jpg";
 import zorro from "./pictures/Doggos/zorro.jpg";
+import kalix from "./pictures/Doggos/kalix.jpg";
+import mando from "./pictures/Doggos/mando.jpg";
 
 class AppState extends Component {
     constructor(props) {
@@ -236,6 +238,32 @@ class AppState extends Component {
                     livedog: 'Ja, Stabil och större hund.',
                     livecat: 'Nej',
                     info: 'Zorro sökker ett aktivt hem gärna med annan hundkompis! Vi söker ett hem på landet då storstadslivet inte är något för Zorro. Nya hemmet ska vara hundvana och veta vad det innebär att ha en hund som behöver mycket fysisk som psykisk stimulans. Ger man Zorro utlopp för sitt stora energibehov så kommer man få en fantastisk vän. Gärna inhägnad tomt. Till en familj som inte lämnar honom ensam längre stunder utan har ett jobb där han kan följa med eller är hemma på dagarna.'
+                },
+                {
+                    image: kalix,
+                    name: 'Kalix',
+                    age: '2 år',
+                    breed: 'Blandras',
+                    gender: 'Hane (ej kastrerad)',
+                    height: 'ca 60 cm',
+                    weight: '25 kg',
+                    livekids: 'Tonåringar',
+                    livedog: 'Ja, stabil tik.',
+                    livecat: 'Troligtvis inte',
+                    info: 'Till underbara Kalix söker vi efter ett hem som älskar utevistelse – denna kille älskar nämligen att röra på sig! Han vill komma till någon som bor ute på landet då storstadslivet inte är någonting för honom. Hans drömhem skulle vara någon vill aktivera sin hund genom drag men som har en mysig plats i soffan vid kvällens slut. Då Kalix är en försiktig själ söker vi efter ett hem utan småbarn, där han kan få vara i centrum. Känner du att just du är rätt hem för Kalix? Tveka inte att höra av dig!'
+                },
+                {
+                    image: mando,
+                    name: 'Mando',
+                    age: '2 år',
+                    breed: 'Blandras (Karelsk björnhund/Laika)',
+                    gender: 'Hane (ej kastrerad)',
+                    height: 'ca 55 cm',
+                    weight: '23 kg',
+                    livekids: 'Nej',
+                    livedog: 'Ja, trygg och stabil tik.',
+                    livecat: 'Nej',
+                    info: 'Vi söker ett hem med fokus på jakt och/eller eftersök. Mando vill komma till ett hem som föredrar skogsturer framför stadspromenader. Han älskar viltspår.  De djurslag han är mest intresserad av är älg och vildsvin. De flesta av Mandos syskon bor i jakthem och ”arbetar” som jakthundar under säsong och i vill gärna att den här killen hamnar i ett liknande hem. Vi ser att hans framtida familj har tidigare erfarenhet av jakthundar och gärna har haft liknande raser. Är du en jägare som ser hunden som en självklar del i din familj och låter hunden få vara din bästa vän även mellan jaktpassen, hör av dig till oss!'
                 },
             ],
             likedDogs: []
