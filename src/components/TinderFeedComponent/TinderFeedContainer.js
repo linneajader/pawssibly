@@ -23,7 +23,7 @@ class App extends Component {
       const {appState, setAppState} = this.props;
       const child = appState.dogDB[this.props.appState.dogNr]
           ? <TinderFeedComponent {...{appState, setAppState}}/>
-          : <NoMoreDogs>No more dogs :'(</NoMoreDogs>;
+          : <NoMoreDogs>För tilfället finns det inga fler annonser</NoMoreDogs>;
     return (
       <ComponentContainer>
           {child}

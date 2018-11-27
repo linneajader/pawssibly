@@ -87,6 +87,12 @@ class App extends Component {
                     </TextContainer>
                     <DropdownArrow><Arrow down={this.state.down}/></DropdownArrow>
                 </ShortInfoContainer>
+                <InfoText>   </InfoText>
+                <InfoText>Mankhöjd: {dog.height}</InfoText>
+                <InfoText>Vikt: {dog.weight}</InfoText>
+                <InfoText>Kan bo med barn: {dog.livekids}</InfoText>
+                <InfoText>Kan bo med hund: {dog.livedog}</InfoText>
+                <InfoText>Kan bo med katt: {dog.livecat}</InfoText>
                 <InfoText marginTop>{dog.info}</InfoText>
             </ComponentContainer>
         );
