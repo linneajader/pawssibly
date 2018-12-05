@@ -13,7 +13,6 @@ import leo from "./pictures/Doggos/leo.jpg";
 import loke from "./pictures/Doggos/loke.jpg";
 import thuy from "./pictures/Doggos/Thuy-200x113.jpg";
 import chimoon from "./pictures/Doggos/Chimoon.png";
-import freja from "./pictures/Doggos/freja.jpg";
 import kid from "./pictures/Doggos/kid.jpg";
 import freddie from "./pictures/Doggos/freddie.jpg";
 import babsan from "./pictures/Doggos/babsan.jpg";
@@ -45,6 +44,9 @@ import image24 from "./pictures/Doggos/kawalier_king_charles.jpg";
 import image25 from "./pictures/Doggos/papillion.jpeg";
 import image26 from "./pictures/Doggos/Pekingese.jpg";
 import image27 from "./pictures/Doggos/dvarg_pudel.jpg";
+import alise from "./pictures/Cats/alise.jpg";
+import clemenza from "./pictures/Cats/clemenza.jpg";
+import lovalee from "./pictures/Cats/lovalee.jpg";
 
 class AppState extends Component {
     constructor(props) {
@@ -81,6 +83,19 @@ class AppState extends Component {
                     info: 'Vi söker Ett kärleksfullt hem som uppskattar gos och lek lika mycket som Rolex. Hans nya familj tar med honom på skojiga och händelsefulla promenader och erbjuder honom en självklar plats i både famn, soffa och säng. Där du är, där vill Rolex vara. I den här lilla killen kommer du att få en fantastisk kompis livet ut!' ,
                 },
                 {
+                    image: alise,
+                    name: 'Alise',
+                    age: '01/01/2014',
+                    breed: '-',
+                    gender: 'Hona',
+                    height: '-',
+                    weight: '-',
+                    livekids: '-',
+                    livedog: '-',
+                    livecat: 'Ja',
+                    info: 'Placerad på avdelning: c.Goset. Alise kommer från ett område i Sollentuna, där hon hittats med ett 50-tal andra katter i olika åldrar. Sollentunakatterna har levt i åratal ute bland gammalt fallfärdigt bråte och skräp. En smutsig och farlig catcave för katter att vistas på med andra ord. Dom har snabbt ökat i antal pga att dom varit okastrerade. När missarna haft tur har dom blivit matade av boende i området med t ex ravoili och falukorv, vilket inte är en optimal diet för katter men som i alla fall har räddat dom undan svält. Katterna har blivit vana vid människor, men hållit sig på avstånd då många tyvärr har farit illa under sin tid som hemlös katt. Alla behöver dom hitta någon att bli älskad av i ett förevigthem för att få veta hur livet faktiskt kan vara.' ,
+                },
+                {
                     image: rambo,
                     name: 'Rambo',
                     age: '7 år',
@@ -92,6 +107,19 @@ class AppState extends Component {
                     livedog: 'Nej',
                     livecat: 'Ja',
                     info: 'Till lilla runda Rambo söker vi ett glatt hem med lite ensamtid. Någon som uppskattar ett charmtroll och ett mysigt sällskap i soffan. Hans nya familj tar med honom på det mesta och ser honom som en självklar del i familjen. Med en Rambo i ditt liv kommer du få guldkant på tillvaron.'
+                },
+                {
+                    image: clemenza,
+                    name: 'Clemenza',
+                    age: '01/04/2012',
+                    breed: '-',
+                    gender: 'Hona',
+                    height: '-',
+                    weight: '-',
+                    livekids: '-',
+                    livedog: '-',
+                    livecat: 'Ja',
+                    info: 'Placerad på avdelning: a.Buset. Clemenza hämtades hos en dam i Vårby tillsammans med Gulldocka, Fredo, Hagen och Connie. Låt inte hennes till synes strikta blick lura dig, Clemenza älskar gos men är lite försiktig till en början. Ibland blir hon så glad av allt gos att hon kan nypa till lite. Clemenza skulle vilja komma till en lugn person utan barn som kan ge henne massor av sin uppmärksamhet och kärlek.' ,
                 },
                 {
                     image: diesel,
@@ -119,6 +147,19 @@ class AppState extends Component {
                     livecat: 'Nej',
                     info: 'Vi söker ett hundkunnigt hem med stort hjärta och önskan att hjälpa en liten kille att hitta sitt absolut sista hem! I och med Leos bakgrund är det enormt viktigt att det nu blir helt rätt för honom. Han ska kunna fungera med andra hundar men för säkerhets skull så ser vi gärna att ni som söker (om ni har hund) har tik eller en väldigt trygg och stabil hanhund. Vi ser gärna att du är aktiv och älskar att vara ute och röra på dig. Likaväl som du kanske gillar att mysa i soffan när det blåser kallt ute. Leo är en anpassningsbar hund, han är en guldhund! '
                 },
+                {
+                    image: lovalee,
+                    name: 'Lovalee',
+                    age: '24/06/2016',
+                    breed: '-',
+                    gender: 'Hona',
+                    height: '-',
+                    weight: '-',
+                    livekids: '-',
+                    livedog: '-',
+                    livecat: 'Ja',
+                    info: 'Placerad på avdelning: e.Klöset. Lovalee kommer från ett ställe i Kolbäck/Västerås där katthållningen gått överstyr, vilket ledde till att det blivit ett ärende hos Länsstyrelsen. Lovalie hade en tuff start hos oss när hon födde sina ungar där endast en unge överlevde med en viss osäkerthet men som blev starkare för varje dag. Nu letar Lovalie efter ett lugnt hem, utan yngre barn, där hon kan få se att människor är härliga varelser och inga hon behöver vara skeptisk mot.'
+                },    
                 {
                     image: loke,
                     name: 'Loke',
@@ -157,14 +198,6 @@ class AppState extends Component {
                     livedog: 'Ja',
                     livecat: 'Ja',
                     info: 'Till Chimoon söker vi ett mysigt och kärleksfullt hem med vana av nakenhundar sedan tidigare, eller åtminstone med förståelse för att nakenhundar behöver en del specialvård trots att de inte har någon päls. Vi söker helt enkelt någon som är påläst om rasen. Någon som i början har mycket tid för henne och hennes träning. Hon behöver börja från början och behandlas som en valp eftersom hon tidigare saknat rutiner. Med Chimoon i ditt liv får du vara beredd på mys och gos och hon vill gärna vara med dig hela tiden. Vi misstänker att hon inte gärna blir lämnad ensam och du bör ha väldigt lite ensamtid för att hon ska må bra.  Med rätt kläder följer hon gärna med dig ut på mysiga skogspromenader.'
-                },
-                {
-                    image: freja,
-                    name: 'Freja',
-                    age: '3 år',
-                    breed: 'Boxer',
-                    gender: 'Hona',
-                    info: 'Boxers were originally bred to be medium-size guard dogs. Today, although they are a part of the AKC’s Working Group, they mostly find homes as loving family companions. They’ve got the muscular build of the guard dogs they were bred to be, and they can look imposing until you realize that within those sturdy bodies, they’re bursting with playful joie de vivre.'
                 },
                 {
                     image: image6,
