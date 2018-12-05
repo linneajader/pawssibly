@@ -15,6 +15,7 @@ const AppContainer = styled.div`
     max-width: 1000px;
     padding: 15rem 0 90rem;
     background-color: #E5989B;
+    overflow-x: hidden;
     ${props => props.center && css`
         background-color: #e7e7e7;
     `}
@@ -33,7 +34,7 @@ class App extends Component {
         const tinderFeedComponent = this.props.appState.activeStage === 3 ? <TinderFeedComponent {...{appState, setAppState}}/> : null;
         const aboutUsComponent = this.props.appState.activeStage === 5 ? <AboutUsComponent {...{appState, setAppState}}/> : null;
         return (
-            <AppContainer center={this.props.appState.activeStage === 3}>
+            <AppContainer id='app-container' center={this.props.appState.activeStage === 3}>
                 {/*<BackgroundGIF src={backgroundImage} alt="backgroundImage"/>*/}
                 {tinderFeedComponent}
                 {likedComponent}

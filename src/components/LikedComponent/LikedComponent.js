@@ -44,6 +44,9 @@ const InfoText = styled.p`
         font-weight: normal;
     `}
 `;
+const InfoBr = styled.br`
+    font-size: 15rem;
+`;
 const DropdownArrow = styled.p`
     margin-left: auto;
     align-self: center;
@@ -73,7 +76,6 @@ class App extends Component {
     };
     render() {
         const {appState, setAppState} = this.props;
-        console.log(appState.likedDogs);
         const dog = this.props.dog;
         return (
             <ComponentContainer onClick={this.onClick} expand={this.state.expanded}>
@@ -83,11 +85,11 @@ class App extends Component {
                         <NameText>{dog.name}</NameText>
                         <NameText>{dog.age}</NameText>
                         <InfoText>Ras: {dog.breed}</InfoText>
-                        <InfoText>Kön: {dog.gender}</InfoText>
                     </TextContainer>
                     <DropdownArrow><Arrow down={this.state.down}/></DropdownArrow>
                 </ShortInfoContainer>
-                <InfoText>   </InfoText>
+                <InfoBr/>
+                <InfoText>Kön: {dog.gender}</InfoText>
                 <InfoText>Mankhöjd: {dog.height}</InfoText>
                 <InfoText>Vikt: {dog.weight}</InfoText>
                 <InfoText>Kan bo med barn: {dog.livekids}</InfoText>

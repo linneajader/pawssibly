@@ -25,7 +25,7 @@ class App extends Component {
           ? <TinderFeedComponent {...{appState, setAppState}}/>
           : <NoMoreDogs> För tilfället finns det inga fler annonser :(</NoMoreDogs>;
     return (
-      <ComponentContainer>
+      <ComponentContainer id="tinder-container">
           {child}
       </ComponentContainer>
     );
