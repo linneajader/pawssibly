@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
-import image from "../../pictures/cute-dog-shiba.jpg";
 
 const ComponentContainer = styled.div`
     display: flex;
@@ -75,7 +74,6 @@ class App extends Component {
         this.setState({expanded: !expanded, down: !this.state.down});
     };
     render() {
-        const {appState, setAppState} = this.props;
         const dog = this.props.dog;
         return (
             <ComponentContainer onClick={this.onClick} expand={this.state.expanded}>

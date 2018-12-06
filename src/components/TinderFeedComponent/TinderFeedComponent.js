@@ -137,24 +137,24 @@ class App extends Component {
         }
         document.getElementById('like-button-container').style.opacity = 1 - Math.abs((this.swipeX - this.swipeEndX) / 100);
     };
-    swipeEnd = (e) => {
+    swipeEnd = () => {
         if((this.swipeEndX - this.swipeX) >= (this.viewportWidth/2)){
-            console.log('like');
             this.onLike();
             this.swipeEndX = 0;
             this.swipeEndY = 0;
         }
         if((this.swipeX - this.swipeEndX) >= (this.viewportWidth/2)){
-            console.log('like');
             this.onDislike();
             this.swipeEndX = 0;
             this.swipeEndY = 0;
         }
         document.getElementById('tinder-container').style.right = '0px';
         document.getElementById('tinder-container').style.transform = 'rotate(0deg)';
-        document.getElementById('like').style.opacity = 0;
-        document.getElementById('nope').style.opacity = 0;
-        document.getElementById('like-button-container').style.opacity = 1;
+        if(document.getElementById('like')){
+            document.getElementById('like').style.opacity = 0;
+            document.getElementById('nope').style.opacity = 0;
+            document.getElementById('like-button-container').style.opacity = 1;
+        }
     };
     componentDidMount(){
         document.getElementById('tinder-container').style.position = 'relative';
@@ -166,7 +166,7 @@ class App extends Component {
         document.getElementById('tinder-component').addEventListener('touchend', this.swipeEnd, false);
     }
   render() {
-      const {appState, setAppState} = this.props;
+      const {appState} = this.props;
       const dog = appState.dogDB[this.props.appState.dogNr];
     return (
       <ComponentContainer id="tinder-component">

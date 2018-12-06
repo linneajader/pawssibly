@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import image1 from "../../pictures/NavigationBar/magnifying glass.png";
 import image2 from "../../pictures/NavigationBar/image 3.1.png";
 import image3 from "../../pictures/NavigationBar/paw.png";

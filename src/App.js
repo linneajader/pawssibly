@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
-import backgroundImage from './pictures/lots-of-paws.png';
-
 import NavigationBarComponent from './components/NavigationBarComponent/NavigationBarContainer';
 import TinderFeedComponent from './components/TinderFeedComponent/TinderFeedContainer';
 import LikedComponent from './components/LikedComponent/LikedContainer';
@@ -19,9 +17,6 @@ const AppContainer = styled.div`
     ${props => props.center && css`
         background-color: #e7e7e7;
     `}
-`;
-const BackgroundGIF = styled.img`
-    width: 100vw;
 `;
 
 class App extends Component {

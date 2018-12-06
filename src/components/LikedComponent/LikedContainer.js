@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
-import image from "../../pictures/cute-dog-shiba.jpg";
 
 import LikedComponent from './LikedComponent'
-import NavigationBarComponent from "../NavigationBarComponent/NavigationBarContainer";
 
 const ComponentContainer = styled.div`
     display: flex;

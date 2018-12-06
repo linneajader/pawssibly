@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 import TinderFeedComponent from './TinderFeedComponent'
-import LikedComponent from "../LikedComponent/LikedContainer";
 
 const ComponentContainer = styled.div`
     display: flex;

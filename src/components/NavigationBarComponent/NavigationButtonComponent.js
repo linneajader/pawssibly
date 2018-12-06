@@ -25,7 +25,6 @@ class App extends Component {
         this.props.setAppState({activeStage: this.props.nr});
     };
     render() {
-        const {appState, setAppState} = this.props;
         return (
             <ComponentContainer
                 onClick={this.onClick}
