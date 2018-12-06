@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import styled, {css} from 'styled-components';
 
 const ComponentContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 20%;
     background-color: #FFCDB2;
@@ -16,8 +19,8 @@ const ComponentContainer = styled.div`
     `}
 `;
 const ImageContainer = styled.img`
-    padding: 15%;
     width: calc(100% - 30%);
+    max-width: 45px;
 `;
 
 class App extends Component {

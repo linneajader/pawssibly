@@ -10,7 +10,7 @@ const AppContainer = styled.div`
     justify-content: center;
     min-height: calc(100vh - 105rem);
     width: 100%;
-    max-width: 1000px;
+    max-width: 500px;
     padding: 15rem 0 90rem;
     background-color: #E5989B;
     overflow-x: hidden;

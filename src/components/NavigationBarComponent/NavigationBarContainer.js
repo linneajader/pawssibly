@@ -16,7 +16,7 @@ const ComponentContainer = styled.div`
     display: flex;
     height: 60rem;
     width: 100%;
-    max-width: 1000px;
+    max-width: 500px;
 `;
 
 class App extends Component {
