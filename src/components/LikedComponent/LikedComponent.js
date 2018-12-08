@@ -43,8 +43,9 @@ const InfoText = styled.p`
         font-weight: normal;
     `}
 `;
-const InfoBr = styled.br`
+const InfoP = styled.p`
     font-size: 15rem;
+    margin-bottom: 15rem;
 `;
 const DropdownArrow = styled.p`
     margin-left: auto;
@@ -86,7 +87,7 @@ class App extends Component {
                     </TextContainer>
                     <DropdownArrow><Arrow down={this.state.down}/></DropdownArrow>
                 </ShortInfoContainer>
-                <InfoBr/>
+                <InfoP/>
                 <InfoText>Kön: {dog.gender}</InfoText>
                 <InfoText>Mankhöjd: {dog.height}</InfoText>
                 <InfoText>Vikt: {dog.weight}</InfoText>
