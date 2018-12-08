@@ -17,6 +17,7 @@ const ComponentContainer = styled.div`
     height: 60rem;
     width: 100%;
     max-width: 500px;
+    z-index: 99999999;
 `;
 
 class App extends Component {

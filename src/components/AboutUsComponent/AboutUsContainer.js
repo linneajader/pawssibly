@@ -60,7 +60,7 @@ class App extends Component {
           <InfoText> Ålder: 18 <br/> Pronomen: Hon <br/> Linnea är en glad tjej som ständigt vill se sig själv utvecklas. När hon inte studerar jobbar hon som skridskotränare, spenderar tid med sin hund eller tid på scouterna samt umgås med nära och kära. Linnea är stolt matte till en energisk skogsblandning mellan Jämnthund och Karelisk Björnhund.</InfoText>
           <ImageContainer src={mattias} alt="mattias"/>
           <NameText> M A T T I A S</NameText>
-          <InfoText> Roll: Rådgivare <br/> Pronomen: Han <br/> För att få hjälp och lära oss om programmering vände vi oss till vår rådgivare Mattias Norling. Mattias har i två år jobbat som konsulent på företaget HiQ med just programmering och specialicerar sig på just programmering. Det är tack vare honom vi har lyckats lära oss om programmering och fått ihop detta program. Utan hans rådgivning och smarta ideér hade vi inte lyckats nå så långt som vi nått, och vi är extremt tacksamma för all hans hjälp! </InfoText>
+          <InfoText> Roll: Rådgivare <br/> Pronomen: Han <br/> För att få hjälp och lära oss om programmering vände vi oss till vår rådgivare Mattias Norling. Mattias har i två år jobbat som konsulent på företaget HiQ med just programmering. Det är tack vare honom vi har lyckats lära oss om programmering och fått ihop detta program. Utan hans rådgivning och smarta ideér hade vi inte lyckats nå så långt som vi nått, och vi är extremt tacksamma för all hans hjälp! </InfoText>
       </ComponentContainer>
     );
   }
